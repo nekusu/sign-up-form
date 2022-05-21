@@ -1,10 +1,11 @@
 .App {
   min-height: 100vh;
-  padding-inline: 35px;
+  padding: 30px 35px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 30px;
+  position: relative;
   background-color: var(--bg-color);
   color: white;
   font-family: 'Kumbh Sans';
@@ -155,17 +156,18 @@ input:focus {
   border-color: transparent;
 }
 
-input:not(:focus):hover {
+input:not(:focus):hover,
+.GithubButton:hover {
   background-color: hsl(224, 31%, 22.5%);
   border-color: transparent;
 }
 
-button[type="submit"] {
+button,
+.GithubButton {
   padding: 12px 18px;
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(to right, #765da0, #503f6d);
   color: white;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -173,6 +175,10 @@ button[type="submit"] {
   font-weight: 500;
   font-family: 'Kumbh Sans';
   cursor: pointer;
+}
+
+button[type="submit"] {
+  background: linear-gradient(to right, #765da0, #503f6d);
   transition: transform .2s, box-shadow .5s;
 }
 
@@ -181,8 +187,13 @@ button svg {
 }
 
 button:hover,
-button:focus {
+button:focus,
+.GithubButton:hover,
+.GithubButton:focus {
   transform: scale(1.05);
+}
+
+button[type="submit"]:hover {
   box-shadow: 0 8px 14px rgba(174, 137, 236, 0.175);
 }
 
@@ -192,7 +203,8 @@ button:focus svg {
 }
 
 input:active,
-button:active {
+button:active,
+.GithubButton:active {
   transform: scale(0.95);
 }
 
@@ -210,8 +222,36 @@ p {
   text-decoration: underline;
 }
 
+footer {
+  height: 70px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  opacity: 0;
+  animation: fadeIn .5s ease 2.5s forwards;
+}
+
+.GithubButton {
+  background-color: hsl(224, 31%, 20%);
+  text-decoration: none;
+  transition: all .3s, transform .2s;
+}
+
+@media screen and (max-height: 730px) {
+  .App {
+    padding-bottom: 0 !important;
+  }
+
+  footer {
+    position: static;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .App {
+    padding-bottom: 100px;
     flex-direction: column;
   }
 
@@ -233,7 +273,7 @@ p {
 
 @media screen and (max-width: 500px) {
   .App {
-    padding: 30px 25px;
+    padding-inline: 25px;
   }
 
   .ParallaxContainer .sphere1 {

@@ -1,5 +1,6 @@
 import Parallax from './components/Parallax';
 import Form from './components/Form';
+import GithubButton from './components/GithubButton';
 import './styles/App.css';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         <Form />
         <p>Already have an account? <span className="link">Log in</span></p>
       </main>
+      <footer>
+        <GithubButton username="nekusu" />
+      </footer>
     </div>
   );
 }
