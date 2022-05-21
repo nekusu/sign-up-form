@@ -14,6 +14,7 @@
   --link: #ff9dac;
   --radius: 25px;
   --shadow: 0 8px 14px rgba(0, 0, 0, 0.125);
+  --text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 @keyframes fadeIn {

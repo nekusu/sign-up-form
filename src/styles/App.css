@@ -8,10 +8,11 @@
   background-color: var(--bg-color);
   color: white;
   font-family: 'Kumbh Sans';
+  overflow: hidden;
 }
 
 aside {
-  min-width: 400px;
+  min-width: 380px;
   max-width: 40vw;
   position: relative;
   user-select: none;
@@ -21,8 +22,8 @@ aside {
 aside h1 {
   position: relative;
   z-index: 1;
-  font-size: 62px;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  font-size: clamp(36px, 4vw, 62px);
+  text-shadow: var(--text-shadow);
   opacity: 0;
   animation: moveIn 2s ease .5s forwards;
 }
@@ -31,8 +32,8 @@ aside p {
   margin-block: 40px;
   position: relative;
   z-index: 1;
-  font-size: 22px;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  font-size: clamp(16px, 1.75vw, 22px);
+  text-shadow: var(--text-shadow);
   opacity: 0;
   animation: moveIn 2s ease .7s forwards;
 }
@@ -87,7 +88,7 @@ main {
 
 h2 {
   margin-bottom: 10px;
-  font-size: 32px;
+  font-size: clamp(24px, 3vw, 32px);
   animation: moveIn 1.5s ease .2s forwards;
 }
 
@@ -118,9 +119,9 @@ input {
   width: 100%;
   margin-top: 6px;
   padding: 8px 16px;
-  background-color: transparent;
+  background-color: hsl(224, 31%, 20%);
   color: white;
-  border: 1px solid white;
+  border: 1px solid transparent;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   font-size: 14px;
@@ -139,16 +140,16 @@ input:not(:focus):invalid {
 }
 
 input:not(:focus):placeholder-shown {
-  border-color: white;
+  border-color: transparent;
 }
 
 input:focus {
-  background-color: rgba(255, 255, 255, 0.175);
+  background-color: hsl(224, 31%, 30%);
   border-color: transparent;
 }
 
 input:not(:focus):hover {
-  background-color: rgba(255, 255, 255, 0.075);
+  background-color: hsl(224, 31%, 22.5%);
   border-color: transparent;
 }
 
@@ -200,4 +201,48 @@ p {
 
 .link:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  .App {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ParallaxContainer {
+    top: 50% !important;
+    left: 0% !important;
+  }
+
+  h2 {
+    text-shadow: var(--text-shadow);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    padding: 30px 25px;
+  }
+
+  .ParallaxContainer .sphere1 {
+    z-index: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .FormGrid {
+    gap: 8px;
+  }
+
+  .FormGrid .Input:nth-child(3),
+  .FormGrid .Input:nth-child(4) {
+    grid-column: 1 / 3;
+  }
 }
