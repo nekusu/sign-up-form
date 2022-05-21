@@ -1,21 +1,94 @@
 .App {
+  min-height: 100vh;
+  padding-inline: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
   background-color: var(--bg-color);
   color: white;
   font-family: 'Kumbh Sans';
 }
 
+aside {
+  min-width: 400px;
+  max-width: 40vw;
+  position: relative;
+  user-select: none;
+  pointer-events: none
+}
+
+aside h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 62px;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: moveIn 2s ease .5s forwards;
+}
+
+aside p {
+  margin-block: 40px;
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: moveIn 2s ease .7s forwards;
+}
+
+.ParallaxChild {
+  position: absolute;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.ParallaxChild img {
+  height: 100%;
+}
+
+.ParallaxContainer .ethereum {
+  left: calc(50% - 270px);
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.ParallaxContainer .sphere1 {
+  height: 100px;
+  z-index: 2;
+  top: 15%;
+  left: 12.5%;
+  animation-delay: .6s;
+}
+
+.ParallaxContainer .sphere2 {
+  height: 75px;
+  bottom: 7.5%;
+  right: 10%;
+  animation-delay: .4s;
+}
+
+.ParallaxContainer .sphere3 {
+  height: 60px;
+  top: 5%;
+  right: 22.5%;
+  animation-delay: .2s;
+}
+
 main {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   text-align: center;
+  opacity: 0;
+  animation: moveIn 1s ease .3s forwards;
 }
 
 h2 {
   margin-bottom: 10px;
   font-size: 32px;
+  animation: moveIn 1.5s ease .2s forwards;
 }
 
 form {
