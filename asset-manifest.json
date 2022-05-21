@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/sign-up-form/static/css/main.3f4ddd7c.css",
+    "main.js": "/sign-up-form/static/js/main.6739757a.js",
+    "static/media/Ethereum.png": "/sign-up-form/static/media/Ethereum.986b5beac28e888254cd.png",
+    "index.html": "/sign-up-form/index.html",
+    "main.3f4ddd7c.css.map": "/sign-up-form/static/css/main.3f4ddd7c.css.map",
+    "main.6739757a.js.map": "/sign-up-form/static/js/main.6739757a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f4ddd7c.css",
+    "static/js/main.6739757a.js"
+  ]
+}
