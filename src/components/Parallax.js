@@ -14,11 +14,7 @@ function Parallax() {
       useWindowMouseEvents
       resetOnLeave
       containerStyles={{
-        width: "100%",
-        height: "540px",
         position: "absolute",
-        top: "calc(50% - 270px)",
-        left: "2.5%",
         overflow: "visible",
       }}
     >
