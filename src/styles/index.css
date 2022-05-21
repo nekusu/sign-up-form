@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+:root {
+  --bg-color: #1a2031;
+  --text-color: rgba(255, 255, 255, 0.75);
+  --valid: #00d1b2;
+  --invalid: #ff4d4f;
+  --link: #ff9dac;
+  --radius: 25px;
+  --shadow: 0 8px 14px rgba(0, 0, 0, 0.125);
+}

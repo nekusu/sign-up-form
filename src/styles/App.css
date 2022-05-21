@@ -1,0 +1,130 @@
+.App {
+  background-color: var(--bg-color);
+  color: white;
+  font-family: 'Kumbh Sans';
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+form {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: left;
+  font-family: 'Poppins';
+}
+
+.FormGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+label {
+  margin-left: 6px;
+  display: block;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 14px;
+  font-family: 'Poppins';
+  transition: all .3s, transform .2s;
+}
+
+input:not(:focus):hover:valid,
+input:not(:focus):valid {
+  border-color: var(--valid);
+}
+
+input:not(:placeholder-shown):not(:focus):hover:invalid,
+input:not(:focus):invalid {
+  border-color: var(--invalid);
+}
+
+input:not(:focus):placeholder-shown {
+  border-color: white;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.175);
+  border-color: transparent;
+}
+
+input:not(:focus):hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-color: transparent;
+}
+
+button[type="submit"] {
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(to right, #765da0, #503f6d);
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Kumbh Sans';
+  cursor: pointer;
+  transition: transform .2s, box-shadow .5s;
+}
+
+button svg {
+  transition: transform .3s;
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.05);
+  box-shadow: 0 8px 14px rgba(174, 137, 236, 0.175);
+}
+
+button:hover svg,
+button:focus svg {
+  transform: translateX(3px);
+}
+
+input:active,
+button:active {
+  transform: scale(0.95);
+}
+
+p {
+  font-size: 15px;
+}
+
+.link {
+  display: inline-block;
+  color: var(--link);
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
