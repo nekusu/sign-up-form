@@ -17,25 +17,25 @@ aside {
   max-width: 40vw;
   position: relative;
   user-select: none;
-  pointer-events: none
+}
+
+aside h1,
+aside p {
+  position: relative;
+  z-index: 1;
+  text-shadow: var(--text-shadow);
+  opacity: 0;
+  pointer-events: none;
 }
 
 aside h1 {
-  position: relative;
-  z-index: 1;
   font-size: clamp(36px, 4vw, 62px);
-  text-shadow: var(--text-shadow);
-  opacity: 0;
   animation: moveIn 2s ease .5s forwards;
 }
 
 aside p {
   margin-block: 40px;
-  position: relative;
-  z-index: 1;
   font-size: clamp(16px, 1.75vw, 22px);
-  text-shadow: var(--text-shadow);
-  opacity: 0;
   animation: moveIn 2s ease .7s forwards;
 }
 
@@ -46,6 +46,10 @@ aside p {
   left: 2.5%;
 }
 
+.ParallaxContainer:hover .ParallaxChild.sphere1 img {
+  opacity: 0.65;
+}
+
 .ParallaxChild {
   position: absolute;
   opacity: 0;
@@ -54,6 +58,15 @@ aside p {
 
 .ParallaxChild img {
   height: 100%;
+  transition: transform .35s, opacity 1s;
+}
+
+.ParallaxChild:not(.ethereum) img:hover {
+  transform: scale(0.85);
+}
+
+.ParallaxChild:not(.ethereum) img:active {
+  transform: scale(0.6);
 }
 
 .ParallaxContainer .ethereum {
