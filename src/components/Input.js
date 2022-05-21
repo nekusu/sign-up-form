@@ -5,6 +5,8 @@ function Input(props) {
     label,
     placeholder,
     pattern,
+    title,
+    handleInput,
     id = camelCase(label),
     type = 'text',
     required = true,
@@ -20,6 +22,8 @@ function Input(props) {
         placeholder={placeholder}
         required={required}
         pattern={pattern}
+        title={title}
+        onInput={e => handleInput?.(e.target.value)}
       />
     </div>
   );
