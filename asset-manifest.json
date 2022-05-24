@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/sign-up-form/static/css/main.25c42a95.css",
-    "main.js": "/sign-up-form/static/js/main.ed487c52.js",
+    "main.css": "/sign-up-form/static/css/main.d55076af.css",
+    "main.js": "/sign-up-form/static/js/main.98c22c2f.js",
     "static/media/Ethereum.png": "/sign-up-form/static/media/Ethereum.986b5beac28e888254cd.png",
     "index.html": "/sign-up-form/index.html",
-    "main.25c42a95.css.map": "/sign-up-form/static/css/main.25c42a95.css.map",
-    "main.ed487c52.js.map": "/sign-up-form/static/js/main.ed487c52.js.map"
+    "main.d55076af.css.map": "/sign-up-form/static/css/main.d55076af.css.map",
+    "main.98c22c2f.js.map": "/sign-up-form/static/js/main.98c22c2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.25c42a95.css",
-    "static/js/main.ed487c52.js"
+    "static/css/main.d55076af.css",
+    "static/js/main.98c22c2f.js"
   ]
 }
