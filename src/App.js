@@ -1,3 +1,4 @@
+import TextLoop from 'react-text-loop';
 import Parallax from './components/Parallax';
 import Form from './components/Form';
 import GithubButton from './components/GithubButton';
@@ -8,7 +9,14 @@ function App() {
     <div className="App">
       <aside>
         <Parallax />
-        <h1>A blockchain designed to evolve.</h1>
+        <h1>A blockchain designed to{' '}
+          <TextLoop springConfig={{ damping: 28 }}>
+            <span>evolve</span>
+            <span>grow</span>
+            <span>explore</span>
+          </TextLoop>
+          .
+        </h1>
         <p>Security focused. Upgradeable. Built to last.</p>
       </aside>
       <main>
