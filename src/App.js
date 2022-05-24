@@ -11,11 +11,10 @@ function App() {
         <Parallax />
         <h1>A blockchain designed to{' '}
           <TextLoop springConfig={{ damping: 28 }}>
-            <span>evolve</span>
-            <span>grow</span>
-            <span>explore</span>
+            <span>evolve.</span>
+            <span>grow.</span>
+            <span>explore.</span>
           </TextLoop>
-          .
         </h1>
         <p>Security focused. Upgradeable. Built to last.</p>
       </aside>
