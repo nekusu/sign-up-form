@@ -1,20 +1,18 @@
 # Sign-up Form
-
 Sign-up Form for [The Odin Project](https://www.theodinproject.com/).
 
-## Built with
+## Demo
+🌑 [Live Demo](https://nekusu.github.io/sign-up-form/)
 
-* HTML5
-* CSS
-* JavaScript
+## Built with
 * React
-* ESLint
+* CSS
 
 ## Features
-
 * Elegant UI and clean design.
 * Smooth animations and parallax effects.
 * Form validation.
 * 3D render made by me ^^.
 
-You can visit the finished website [here](https://nekusu.github.io/sign-up-form/).
+## Screenshots
+![](/screenshots/screenshot-0.png)
